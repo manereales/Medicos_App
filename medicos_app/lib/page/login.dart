@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:medicos_app/paginas/listado.dart';
+import 'package:medicos_app/page/homepage.dart';
+import 'package:medicos_app/page/listado.dart';
+import 'package:medicos_app/page/Vista_detalle.dart';
+import 'package:medicos_app/page/perfil.dart';
 
 class login extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //body: log()
-      body: listado(),
+      //appBar: AppBar(),
+      //drawer: Drawer(),
+      //body: Perfil(),
+      body: log(),
+      //body: Detalle(),
     );
   }
 }
@@ -66,9 +73,7 @@ Widget camposPass() {
 
 Widget botonIngresar() {
   return TextButton(
-    onPressed: () {
-      //Navigator.push(context, );
-    },
+    onPressed: () {},
     child: Text(
       "Ingresar",
       style: TextStyle(fontSize: 25, color: Colors.white),

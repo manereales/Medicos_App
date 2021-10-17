@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:medicos_app/componentes/navbar_superior.dart';
+import 'package:medicos_app/widget/button_widget.dart';
+import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
 class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(),
       body: cabecera(),
     );
   }
@@ -28,13 +31,14 @@ class Homepage extends StatelessWidget {
             "¡Bienvenido!",
             style: TextStyle(
               color: Colors.white,
-              fontSize: 50,
+              fontSize: 40,
             ),
           ),
         ),
+        /*
         SafeArea(
           child: NavbarSuperior(),
-        ),
+        ),*/
       ],
     );
   }

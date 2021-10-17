@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicos_app/componentes/object_squares.dart';
-import 'package:medicos_app/componentes/navbar_superior.dart';
+import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
 class listado extends StatelessWidget {
   const listado({Key? key}) : super(key: key);
@@ -8,6 +7,7 @@ class listado extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: NavigationDrawerWidget(),
       body: Column(
         children: <Widget>[cuerpoapp()],
       ),
@@ -18,7 +18,7 @@ class listado extends StatelessWidget {
     return Container(
       child: Column(
         children: <Widget>[
-          SafeArea(child: NavbarSuperior()),
+          //SafeArea(child: NavbarSuperior()),
           SizedBox(
             height: 30,
           ),
@@ -34,7 +34,7 @@ class listado extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          listadoV("tituloMovie", ObjectSquares(), 7)
+          //listadoV("tituloMovie", ObjectSquares(), 7)
         ],
       ),
     );
