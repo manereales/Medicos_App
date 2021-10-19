@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:medicos_app/page/favourites_page.dart';
+import 'package:medicos_app/page/Vista_detalle.dart';
 import 'package:medicos_app/page/listado.dart';
-import 'package:medicos_app/page/people_page.dart';
+
 import 'package:medicos_app/page/perfil.dart';
 import 'package:medicos_app/page/user_page.dart';
+
+final urlImage =
+    'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png';
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -11,8 +14,6 @@ class NavigationDrawerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final name = 'Juan Gonzalez ';
     final email = 'juang@gmail.com';
-    final urlImage =
-        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png';
 
     return Drawer(
       child: Material(
@@ -54,20 +55,20 @@ class NavigationDrawerWidget extends StatelessWidget {
                     text: 'Workflow',
                     icon: Icons.workspaces_outline,
                     onClicked: () => selectedItem(context, 2),
-                  ),
+                  ),*/
                   const SizedBox(height: 16),
                   buildMenuItem(
-                    text: 'Updates',
+                    text: 'Detalles',
                     icon: Icons.update,
-                    onClicked: () => selectedItem(context, 3),
-                  ),*/
+                    onClicked: () => selectedItem(context, 2),
+                  ),
                   const SizedBox(height: 24),
                   Divider(color: Colors.white70),
                   const SizedBox(height: 24),
                   buildMenuItem(
                     text: 'About',
                     icon: Icons.account_tree_outlined,
-                    onClicked: () => selectedItem(context, 4),
+                    onClicked: () => selectedItem(context, 3),
                   ),
                   /*
                   const SizedBox(height: 16),
@@ -171,7 +172,9 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => perfil(),
+          builder: (context) =>
+              UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
+          //perfil(),
         ));
         break;
       case 1:
@@ -179,13 +182,12 @@ class NavigationDrawerWidget extends StatelessWidget {
           builder: (context) => listado(),
         ));
         break;
-      /*
+
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => FavouritesPage(),
+          builder: (context) => Detalle(),
         ));
         break;
-        */
     }
   }
 }

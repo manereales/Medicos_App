@@ -1,10 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
 class Perfil extends StatelessWidget {
   const Perfil({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+        title: Text("Medicos App"),
+      ),
+      body: Column(
+        children: <Widget>[pricipal()],
+      ),
+    );
+
+    /*
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
       height: 853,
@@ -23,6 +35,33 @@ class Perfil extends StatelessWidget {
           informacion(),
           SizedBox(
             height: 200,
+          ),
+          botonIngresar(),
+        ],
+      ),
+    );
+  }*/
+  }
+
+  Widget pricipal() {
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+      height: 850,
+      decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage('assets/img/splash1.jpeg'), fit: BoxFit.cover)),
+      child: Column(
+        children: <Widget>[
+          SizedBox(
+            height: 30,
+          ),
+          perfil(),
+          SizedBox(
+            height: 50,
+          ),
+          informacion(),
+          SizedBox(
+            height: 500,
           ),
           botonIngresar(),
         ],
