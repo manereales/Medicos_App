@@ -2,12 +2,25 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
 class Detalle extends StatelessWidget {
   const Detalle({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    return Scaffold(
+      drawer: NavigationDrawerWidget(),
+      appBar: AppBar(
+        title: Text("Medicos App"),
+      ),
+      //body: Column(
+      //children: <Widget>[pricipal()],
+      body: vista(),
+    );
+  }
+
+  Widget vista() {
     return Column(
       children: <Widget>[
         encabezado(),
@@ -27,7 +40,7 @@ class Detalle extends StatelessWidget {
   Widget encabezado() {
     return Stack(
       children: <Widget>[
-        Image.asset(
+        Image.network(
           "https://tec.mx/sites/default/files/inline-images/doctora-juguetes-cecilia-britton-tecsalud-consultorio.jpg",
           height: 400.0,
           width: 1950.0,
@@ -80,7 +93,7 @@ class Detalle extends StatelessWidget {
 
   Widget ubicacion() {
     return Container(
-        // color: Colors.green,
+        //color: Colors.green,
         //width: 1950,
         child: Column(
             mainAxisAlignment: MainAxisAlignment.start,

@@ -173,8 +173,8 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) =>
-              UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
-          //perfil(),
+              //UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
+              Perfil(),
         ));
         break;
       case 1:

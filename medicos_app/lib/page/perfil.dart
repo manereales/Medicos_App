@@ -11,9 +11,10 @@ class Perfil extends StatelessWidget {
       appBar: AppBar(
         title: Text("Medicos App"),
       ),
-      body: Column(
-        children: <Widget>[pricipal()],
-      ),
+      //body: Column(
+      //children: <Widget>[pricipal()],
+      body: pricipal(),
+      //),
     );
 
     /*
@@ -55,7 +56,7 @@ class Perfil extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          perfil(),
+          datos(),
           SizedBox(
             height: 50,
           ),
@@ -68,82 +69,82 @@ class Perfil extends StatelessWidget {
       ),
     );
   }
-}
 
-Widget perfil() {
-  return Container(
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "Mi Perfil",
-          textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 25, color: Colors.black),
-        )
-      ],
-    ),
-  );
-}
-
-Widget informacion() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.start,
-    children: <Widget>[
-      Column(
+  Widget datos() {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          SizedBox(height: 20),
           Text(
-            "Nombre:               María Alejandra ",
-            textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 20, color: Colors.red),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Apellidos:            Lopez Hernandez",
-            textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 20, color: Colors.red),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Fecha Nacimiento:          24/07/85",
-            textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 20, color: Colors.red),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Text(
-            "Dirección:                     29 av. Norte",
-            textAlign: TextAlign.left,
-            style: TextStyle(fontSize: 20, color: Colors.red),
-          ),
+            "Mi Perfil",
+            textAlign: TextAlign.center,
+            style: TextStyle(fontSize: 25, color: Colors.black),
+          )
         ],
       ),
-    ],
-  );
-}
+    );
+  }
 
-Widget botonIngresar() {
-  return TextButton(
-    onPressed: () {
-      //Navigator.push(context, );
-    },
-    child: Text(
-      "Guardar",
-      style: TextStyle(fontSize: 25, color: Colors.white),
-    ),
-    style: ButtonStyle(
-        padding: MaterialStateProperty.all<EdgeInsets>(
-            EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
-        foregroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
-        backgroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
-        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-                side: BorderSide(color: Colors.greenAccent)))),
-  );
+  Widget informacion() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Column(
+          children: <Widget>[
+            SizedBox(height: 20),
+            Text(
+              "Nombre:               María Alejandra ",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Apellidos:            Lopez Hernandez",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Fecha Nacimiento:          24/07/85",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Dirección:                     29 av. Norte",
+              textAlign: TextAlign.left,
+              style: TextStyle(fontSize: 20, color: Colors.red),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget botonIngresar() {
+    return TextButton(
+      onPressed: () {
+        //Navigator.push(context, );
+      },
+      child: Text(
+        "Guardar",
+        style: TextStyle(fontSize: 25, color: Colors.white),
+      ),
+      style: ButtonStyle(
+          padding: MaterialStateProperty.all<EdgeInsets>(
+              EdgeInsets.symmetric(horizontal: 50, vertical: 20)),
+          foregroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
+          backgroundColor: MaterialStateProperty.all<Color>(Colors.greenAccent),
+          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+              RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(18.0),
+                  side: BorderSide(color: Colors.greenAccent)))),
+    );
+  }
 }
