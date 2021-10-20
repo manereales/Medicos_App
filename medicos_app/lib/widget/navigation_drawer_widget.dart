@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medicos_app/page/Vista_detalle.dart';
+import 'package:medicos_app/page/about.dart';
 import 'package:medicos_app/page/listado.dart';
 
 import 'package:medicos_app/page/perfil.dart';
@@ -186,6 +187,12 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 2:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => Detalle(),
+        ));
+        break;
+
+      case 3:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => about(),
         ));
         break;
     }
