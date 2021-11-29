@@ -3,6 +3,8 @@
    <application
         android:label="medicos_app"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:value="AIzaSyCQwxuOqn4TAbWKTX3lFm3le2xfw2x-Hx4" 
+        android:name="com.google.android.geo.API_KEY"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

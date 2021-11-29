@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
+import '../controller.dart';
+
 class Perfil extends StatelessWidget {
   const Perfil({Key? key}) : super(key: key);
 
@@ -62,7 +64,7 @@ class Perfil extends StatelessWidget {
           ),
           informacion(),
           SizedBox(
-            height: 500,
+            height: 400,
           ),
           botonIngresar(),
         ],
@@ -129,9 +131,7 @@ class Perfil extends StatelessWidget {
 
   Widget botonIngresar() {
     return TextButton(
-      onPressed: () {
-        //Navigator.push(context, );
-      },
+      onPressed: () {},
       child: Text(
         "Guardar",
         style: TextStyle(fontSize: 25, color: Colors.white),

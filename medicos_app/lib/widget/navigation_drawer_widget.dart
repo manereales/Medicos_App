@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:medicos_app/page/Vista_detalle.dart';
 import 'package:medicos_app/page/about.dart';
@@ -8,6 +9,9 @@ import 'package:medicos_app/page/user_page.dart';
 
 final urlImage =
     'https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/800px-User_icon_2.svg.png';
+
+CollectionReference collectionReference =
+    FirebaseFirestore.instance.collection("usuarios");
 
 class NavigationDrawerWidget extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);

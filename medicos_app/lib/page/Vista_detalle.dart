@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
+import '../Map.dart';
+import '../controller.dart';
+
 class Detalle extends StatelessWidget {
   const Detalle({Key? key}) : super(key: key);
 
@@ -16,11 +19,11 @@ class Detalle extends StatelessWidget {
       ),
       //body: Column(
       //children: <Widget>[pricipal()],
-      body: vista(),
+      body: vista(context),
     );
   }
 
-  Widget vista() {
+  Widget vista(BuildContext context) {
     return Column(
       children: <Widget>[
         encabezado(),
@@ -32,7 +35,10 @@ class Detalle extends StatelessWidget {
         SizedBox(
           height: 30,
         ),
-        ubicacion(),
+        ubicacion(context),
+        SizedBox(
+          height: 30,
+        ),
       ],
     );
   }
@@ -91,7 +97,7 @@ class Detalle extends StatelessWidget {
         ]));
   }
 
-  Widget ubicacion() {
+  Widget ubicacion(BuildContext context) {
     return Container(
         //color: Colors.green,
         //width: 1950,
@@ -106,11 +112,18 @@ class Detalle extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Image.asset(
-            "assets/img/mapa.jpg",
-            width: 300,
-            alignment: Alignment.bottomLeft,
-          )
+          FlatButton(
+              onPressed: () {
+                //print('I got clicked');
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => Map(),
+                ));
+              },
+              child: Image.asset(
+                "assets/img/mapa.jpg",
+                width: 300,
+                alignment: Alignment.bottomLeft,
+              ))
         ]));
   }
 }

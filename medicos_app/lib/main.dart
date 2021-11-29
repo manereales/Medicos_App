@@ -5,6 +5,8 @@ import 'package:medicos_app/page/listado.dart';
 import 'package:medicos_app/widget/button_widget.dart';
 import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
+import 'controller.dart';
+
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SystemChrome.setPreferredOrientations([
@@ -33,6 +35,14 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+  void initState() {
+    super.initState();
+    //InsertarUsuario();
+    //getUsuarios();
+
+    getUsuarios();
+  }
+
   @override
   Widget build(BuildContext context) => Scaffold(
         drawer: NavigationDrawerWidget(),
