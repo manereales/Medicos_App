@@ -33,6 +33,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                 builder: (context) => UserPage(
                   name: 'Juan Gonzalez',
                   urlImage: urlImage,
+                  email: email,
                 ),
               )),
             ),
@@ -170,8 +171,11 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) =>
-              UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
+          builder: (context) => UserPage(
+            name: 'Juan Gonzalez',
+            urlImage: urlImage,
+            email: "Juan@gmail.com",
+          ),
           //UserPage(),
         ));
         break;
