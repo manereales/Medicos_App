@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:medicos_app/page/homepage.dart';
 import 'package:medicos_app/page/listado.dart';
+import 'package:medicos_app/page/login.dart';
 import 'package:medicos_app/widget/button_widget.dart';
 import 'package:medicos_app/widget/navigation_drawer_widget.dart';
 
@@ -25,7 +26,8 @@ class AppMedic extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         title: title,
         theme: ThemeData(primarySwatch: Colors.blue),
-        home: Homepage(),
+        home: login(),
+        //Homepage(),
       );
 }
 
@@ -39,8 +41,6 @@ class _MainPageState extends State<MainPage> {
     super.initState();
     //InsertarUsuario();
     //getUsuarios();
-
-    getUsuarios();
   }
 
   @override
@@ -50,21 +50,5 @@ class _MainPageState extends State<MainPage> {
         appBar: AppBar(
           title: Text(AppMedic.title),
         ),
-
-        /*body: Builder(
-          builder: (context) => Container(
-            alignment: Alignment.center,
-            padding: EdgeInsets.symmetric(horizontal: 32),
-            child: ButtonWidget(
-              icon: Icons.open_in_new,
-              text: 'Open Drawer',
-              onClicked: () {
-                Scaffold.of(context).openDrawer();
-                // Scaffold.of(context).openEndDrawer();
-              },
-            ),
-          ),
-        ),
-        */
       );
 }

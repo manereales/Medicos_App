@@ -75,13 +75,12 @@ class NavigationDrawerWidget extends StatelessWidget {
                     icon: Icons.account_tree_outlined,
                     onClicked: () => selectedItem(context, 3),
                   ),
-                  /*
-                  const SizedBox(height: 16),
+                  const SizedBox(height: 24),
                   buildMenuItem(
-                    text: '',
-                    icon: Icons.notifications_outlined,
-                    onClicked: () => selectedItem(context, 5),
-                  ),*/
+                    text: 'Salir',
+                    icon: Icons.exit_to_app,
+                    onClicked: () => selectedItem(context, 4),
+                  ),
                 ],
               ),
             ),
@@ -120,12 +119,6 @@ class NavigationDrawerWidget extends StatelessWidget {
                 ],
               ),
               Spacer(),
-              /*
-              CircleAvatar(
-                radius: 24,
-                backgroundColor: Color.fromRGBO(30, 60, 168, 1),
-                child: Icon(Icons.email, color: Colors.white),
-              )*/
             ],
           ),
         ),
@@ -178,8 +171,8 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) =>
-              //UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
-              Perfil(),
+              UserPage(name: 'Juan Gonzalez', urlImage: urlImage),
+          //UserPage(),
         ));
         break;
       case 1:

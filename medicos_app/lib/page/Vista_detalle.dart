@@ -1,5 +1,6 @@
 import 'dart:convert';
 
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:medicos_app/widget/navigation_drawer_widget.dart';
@@ -14,6 +15,7 @@ class Detalle extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: NavigationDrawerWidget(),
+
       appBar: AppBar(
         title: Text("Medicos App"),
       ),
@@ -114,7 +116,6 @@ class Detalle extends StatelessWidget {
           ),
           FlatButton(
               onPressed: () {
-                //print('I got clicked');
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (context) => Map(),
                 ));
